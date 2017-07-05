@@ -42,6 +42,25 @@ window.onload=function(){
                 return isEmpty;
             }
         },
+        watch: {
+            //监听购物车列表
+            productList: {
+                handler: function(val,oldVal) {
+                    var checkedLength = 0;
+                    for(var i=0;i< this.productList.length; i++) {
+                        if(this.productList[i].checked) {
+                            checkedLength ++;
+                        }
+                    }
+                    if(checkedLength === this.productList.length) {
+                        this.checkAllFlag = true;
+                    } else {
+                        this.checkAllFlag = false;
+                    }
+                },
+                deep: true
+            }
+        },
         methods:{
             //绑定数据
             createView:function () {
