@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <title>Cart</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <style type="text/css">
+      .quentity input {
+        width: 40px;
+        padding: 5px 10px;
+        text-align: center;
+      }
+      .btn.disabled {
+        pointer-events: none;
+        filter: alpha(opacity=50); /*IE滤镜，透明度50%*/
+        -moz-opacity: 0.5; /*Firefox私有，透明度50%*/
+        opacity: 0.5; /*其他，透明度50%*/
+      }
+    </style>
+  </head>
+  <body>
+  <div id="app">
+      <input type="text" v-model="text">{{text}}
+  </div>
+  <script src="js/lib/vue.min.js"></script>
+  <script src="js/lib/vue-resource.js"></script>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        text:'hello world'
+      }
+    })
+  </script>
+  </body>
+</html>
